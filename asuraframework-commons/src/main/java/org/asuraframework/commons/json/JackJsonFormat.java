@@ -33,7 +33,7 @@ import java.util.List;
  * @date 2018/7/14 下午5:28
  * @since 1.0
  */
-public class JackJsonFormat implements IJson {
+public class  JackJsonFormat implements IJson {
 
     private static JackJsonFormat jackJsonFormat;
 
@@ -149,7 +149,7 @@ public class JackJsonFormat implements IJson {
             }
             return rootNode;
         } catch (Exception e) {
-            throw new JsonTransformException("Json获取JsonNode时出现异常。", e);
+            throw new JsonTransformException("Json获取JsonNode时出现异常。json:" + json, e);
         }
     }
 
@@ -172,7 +172,7 @@ public class JackJsonFormat implements IJson {
         try {
             return objectMapper.treeToValue(jsonNode, t);
         } catch (Exception e) {
-            throw new JsonTransformException("将json串内的某一个path下的json串转换为 object 时出现异常。", e);
+            throw new JsonTransformException("将json串内的某一个path下的json串转换为 object 时出现异常。json:" + json, e);
         }
     }
 
@@ -196,7 +196,7 @@ public class JackJsonFormat implements IJson {
         try {
             return objectMapper.readValue(pathJson, typeReference);
         } catch (Exception e) {
-            throw new JsonTransformException("将json串内的某一个path下的json串转换为 object 时出现异常。", e);
+            throw new JsonTransformException("将json串内的某一个path下的json串转换为 object 时出现异常。json:" + json, e);
         }
     }
 
@@ -209,7 +209,7 @@ public class JackJsonFormat implements IJson {
         try {
             return objectMapper.readValue(pathJson, javaType);
         } catch (Exception e) {
-            throw new JsonTransformException("将json串内的某一个path下的json串转换为 object 时出现异常。", e);
+            throw new JsonTransformException("将json串内的某一个path下的json串转换为 object 时出现异常。json:" + json, e);
         }
     }
 
@@ -238,7 +238,7 @@ public class JackJsonFormat implements IJson {
             }
             return list;
         } catch (Exception e) {
-            throw new JsonTransformException("将json串内的某一个path下的json串转换为 List 时出现异常。", e);
+            throw new JsonTransformException("将json串内的某一个path下的json串转换为 List 时出现异常。json:" + json, e);
         }
     }
 

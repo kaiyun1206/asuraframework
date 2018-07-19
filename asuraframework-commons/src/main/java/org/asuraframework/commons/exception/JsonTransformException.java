@@ -17,16 +17,9 @@ package org.asuraframework.commons.exception;
  * @date 2018/7/14 下午3:53
  * @since 1.0
  */
-public class JsonTransformException extends RuntimeException {
+public class JsonTransformException extends SystemException {
 
     private static final long serialVersionUID = 2826302733345457336L;
-
-    /**
-     * 构造器
-     */
-    public JsonTransformException() {
-        super();
-    }
 
     /**
      * 构造器

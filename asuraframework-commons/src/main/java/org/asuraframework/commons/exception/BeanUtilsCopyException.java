@@ -17,16 +17,9 @@ package org.asuraframework.commons.exception;
  * @date 2018/7/14 下午4:01
  * @since 1.0
  */
-public class BeanUtilsCopyException extends RuntimeException {
+public class BeanUtilsCopyException extends SystemException {
 
     private static final long serialVersionUID = -5899907603154679349L;
-
-    /**
-     * 构造器
-     */
-    public BeanUtilsCopyException() {
-        super();
-    }
 
     /**
      * 构造器

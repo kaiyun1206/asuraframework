@@ -17,16 +17,9 @@ package org.asuraframework.commons.exception;
  * @date 2018/7/14 下午4:16
  * @since 1.0
  */
-public class AsuraCryptException extends RuntimeException {
+public class AsuraCryptException extends SystemException {
 
     private static final long serialVersionUID = 5831641858561540063L;
-
-    /**
-     * 构造器
-     */
-    public AsuraCryptException() {
-        super();
-    }
 
     /**
      * 构造器
